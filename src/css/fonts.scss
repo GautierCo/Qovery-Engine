@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("/src/fonts/SF-UI-Text-Regular.otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("/src/fonts/SF-UI-Text-Medium.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("/src/fonts/SF-UI-Text-Semibold.otf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("/src/fonts/SF-UI-Text-Bold.otf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "hk_grotesk";
+    src: url("/src/fonts/hkgrotesk-bold-webfont.woff2") format("woff2"),
+        url("/src/fonts/hkgrotesk-bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "hk_grotesk";
+    src: url("/src/fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
+        url("/src/fonts/hkgrotesk-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
