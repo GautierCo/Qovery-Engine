@@ -3,6 +3,36 @@ body {
     font-family: "SanFrancisco", Helvetica;
 }
 
+h2 {
+    font-family: "hk_grotesk2";
+    font-size: 32px;
+    line-height: 110%;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #454658;
+    padding-top: 1em;
+}
+
+h3 {
+    font-family: "hk_grotesk2";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 110%;
+    color: #454658;
+    margin-bottom: 24px;
+}
+
+h4 {
+    font-family: "hk_grotesk2";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 110%;
+    color: #454658;
+    margin-bottom: 24px;
+}
+
 .hero {
     background-color: #151b2b;
     height: 100vh;
@@ -64,10 +94,8 @@ body {
         display: flex;
 
         .hero__cta {
-            width: 157.16px;
             height: 39px;
             border: 0;
-            background: #454658;
             color: #ffffff;
             border-radius: 3px;
             display: flex;
@@ -77,6 +105,7 @@ body {
             line-height: 21px;
             font-size: 14px;
             font-weight: 600;
+            cursor: pointer;
 
             &--img {
                 display: block;
@@ -84,9 +113,29 @@ body {
             }
         }
 
+        .hero__cta:focus {
+            outline: none;
+        }
+
+        .cta--github {
+            width: 157.16px;
+            background: #454658;
+        }
+
         .cta--discord {
             width: 182px;
             background: #6578c0;
+        }
+
+        .cta--discord:hover {
+            background-color: #90a3ea;
+            transition: background-color ease-in;
+            transition-duration: 0.5s;
+        }
+        .cta--github:hover {
+            background-color: #757582;
+            transition: background-color ease-in;
+            transition-duration: 0.5s;
         }
     }
 
@@ -122,6 +171,7 @@ body {
             z-index: 4;
             position: absolute;
             top: -13%;
+            max-width: 100%;
         }
     }
 
@@ -165,35 +215,74 @@ body {
     }
 }
 
-.concept {
+.concept,
+.usage,
+.blog,
+.partner {
     background-color: #f9f9fd;
-    height: 100vh;
+    padding-top: 96px;
+}
 
+.concept-container {
+    margin: auto;
+    max-width: 904px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.concept--text,
+.usage--text {
+    font-family: SanFrancisco;
+    text-align: center;
+    color: #454658;
+    margin-bottom: 32px;
+    line-height: 150%;
+}
+.usage {
     &-container {
         margin: auto;
         max-width: 904px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-image: url("../../img/bg.svg");
+        background-size: 96%;
+        background-repeat: no-repeat;
+        background-position-x: 130%;
+        background-position-y: 7%;
     }
 
-    h2 {
-        padding-top: 96px;
-        font-family: "hk_grotesk", Helvetica;
-        font-weight: 800;
-        font-size: 32px;
-        line-height: 110%;
-        text-align: center;
-        margin-bottom: 24px;
-        color: #454658;
+    &-rust {
+        max-width: 898px;
+        background: #ffffff;
+        padding: 1.5em;
+        margin-top: 90px;
+        margin-bottom: 48px;
     }
 
-    &--text {
-        font-family: "SF-UI-Text-Regular", Helvetica;
-        text-align: center;
-        color: #454658;
-        margin-bottom: 32px;
-        line-height: 150%;
+    &__card-rust {
+        font-family: SanFrancisco;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 26px;
+        background: #5d64d2;
+        color: #ffffff;
+        border-radius: 3px;
+        margin-bottom: 1.7em;
+    }
+
+    &__code-rust {
+        max-width: 850px;
+    }
+
+    &__code-rust--img {
+        width: 100%;
     }
 }
 
@@ -252,4 +341,79 @@ body {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+.blog {
+    &-container {
+        padding: 1em;
+        margin: auto;
+        max-width: 1059px;
+        display: flex;
+        align-items: baseline;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 65px 0px;
+    }
+
+    &-card {
+        max-width: 428px;
+        width: 48%;
+    }
+
+    &-content {
+        font-family: "SanFranciscoRegular";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        padding-bottom: 12px;
+    }
+
+    &-more {
+        font-family: "SanFranciscoRegular";
+        color: #5d64d2;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 130%;
+        cursor: pointer;
+    }
+
+    &-img {
+        max-width: 100%;
+        padding-bottom: 24px;
+    }
+
+    &-spacer {
+        height: 24px;
+    }
+}
+
+.partner {
+    &-container {
+        margin: auto;
+        max-width: 904px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 125px;
+    }
+
+    &-logos {
+        margin-top: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &-img {
+        width: 30%;
+    }
+}
+
+.footer {
+    background: #151b2b;
+    height: 130px;
 }
