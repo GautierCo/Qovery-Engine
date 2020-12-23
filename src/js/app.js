@@ -1,8 +1,6 @@
 
-const animateWorkflow = (action) => {
-
-    const workflowItems = document.querySelectorAll(".work");
-
+const animateWorkflow = (workflow, action) => {
+    const workflowItems = workflow.target.querySelectorAll(".work");
     workflowItems.forEach((element) => {
         if(action === "remove") element.classList.remove("workflow-item");
         if(action === "add") element.classList.add("workflow-item");
@@ -11,11 +9,11 @@ const animateWorkflow = (action) => {
 
 const workflowObserver = new IntersectionObserver((entries) => {
     const workflow = entries[0];
-    if (workflow.intersectionRatio <= 0 || workflow.length < 0) {
+    if (workflow.intersectionRatio <= 0) {
         //animateWorkflow("remove")
         return;
     } else {
-        animateWorkflow("add");
+        animateWorkflow(workflow, "add");
     }
 });
 
