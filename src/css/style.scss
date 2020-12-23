@@ -301,43 +301,43 @@ h4 {
 
 .workflow-item {
     opacity: 0;
-    animation: WorkflowFadeIn 0.5s forwards 0.5s;
+    animation: WorkflowFadeIn 0.5s forwards;
 }
 
 .main {
-    animation-delay: 0.5s;
+    animation-delay: 1s;
 }
 
 .buildArrow {
-    animation-delay: 0.9s;
+    animation-delay: 1.3s;
 }
 
 .ci {
-    animation-delay: 1.2s;
+    animation-delay: 1.6s;
 }
 
 .imageArrow {
-    animation-delay: 1.5s;
+    animation-delay: 1.9s;
 }
 
 .registry {
-    animation-delay: 1.8s;
-}
-
-.deployArrow {
     animation-delay: 2.1s;
 }
 
-.cloudProvider {
-    animation-delay: 3s;
-}
-
-.monitorArrow {
-    animation-delay: 2.7s;
+.deployArrow {
+    animation-delay: 2.4s;
 }
 
 .monitoring {
-    animation-delay: 2.4s;
+    animation-delay: 2.7s;
+}
+
+.monitorArrow {
+    animation-delay: 3s;
+}
+
+.cloudProvider {
+    animation-delay: 3.3s;
 }
 
 @keyframes WorkflowFadeIn {
@@ -371,23 +371,23 @@ h4 {
     }
 
     &-card--animate {
-        animation: AnimateCard 0.9s forwards 0.3s;
+        animation: AnimateCard 0.9s forwards;
     }
 
     &-card--one {
-        animation-delay: 0.3s;
-    }
-
-    &-card--two {
         animation-delay: 0.8s;
     }
 
+    &-card--two {
+        animation-delay: 1.3s;
+    }
+
     &-card--three {
-        animation-delay: 1.1s;
+        animation-delay: 1.8s;
     }
 
     &-card--four {
-        animation-delay: 1.4s;
+        animation-delay: 2.3s;
     }
 
     &-content {
@@ -559,7 +559,8 @@ h4 {
 
 @media screen and (max-width: 480px) {
     .hero {
-        height: 70vh;
+        height: 100%;
+        padding-bottom: 5em;
     }
 
     .hero__img {
