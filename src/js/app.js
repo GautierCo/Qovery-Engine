@@ -7,13 +7,29 @@ const animateWorkflow = (workflow, action) => {
     });
 };
 
-const intersectionObserver = new IntersectionObserver((entries) => {
+const workflowObserver = new IntersectionObserver((entries) => {
     const workflow = entries[0];
     if (workflow.intersectionRatio <= 0) {
         //animateWorkflow(workflow, "remove")
+        return;
     } else {
         animateWorkflow(workflow, "add");
     }
 });
 
-intersectionObserver.observe(document.querySelector(".workflow"));
+workflowObserver.observe(document.querySelector(".workflow"));
+
+
+const blogObserver = new IntersectionObserver((entries) => {
+    const blog = entries[0];
+    if (blog.intersectionRatio <= 0) {
+        return;
+    } else {
+        const blogItems = blog.target.querySelectorAll(".blog-card");
+        blogItems.forEach((element) => {
+            element.classList.add("blog-card--animate");
+        });
+    }
+});
+
+blogObserver.observe(document.querySelector(".blog-container"));
