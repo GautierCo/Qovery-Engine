@@ -1,18 +1,7 @@
 
-const animateWorkflow = (workflow, action) => {
+const animateWorkflow = (action) => {
 
-    if(!workflow) {
-        console.log("Erreur Workflow undefined", workflow);
-        return;
-    }
-    const workflowId = workflow.target.querySelector("#workflow1")
-    
-    const workflowItems =  workflowId.querySelectorAll(".work");
-
-    console.log("workflow", workflow);
-    console.log("workflowId", workflowId);
-    console.log("workflowItems", workflowItems);
-
+    const workflowItems = document.querySelectorAll(".work");
 
     workflowItems.forEach((element) => {
         if(action === "remove") element.classList.remove("workflow-item");
@@ -23,15 +12,14 @@ const animateWorkflow = (workflow, action) => {
 const workflowObserver = new IntersectionObserver((entries) => {
     const workflow = entries[0];
     if (workflow.intersectionRatio <= 0 || workflow.length < 0) {
-        //animateWorkflow(workflow, "remove")
+        //animateWorkflow("remove")
         return;
     } else {
-        animateWorkflow(workflow, "add");
+        animateWorkflow("add");
     }
 });
 
 workflowObserver.observe(document.querySelector(".workflow"));
-
 
 const blogObserver = new IntersectionObserver((entries) => {
     const blog = entries[0];
