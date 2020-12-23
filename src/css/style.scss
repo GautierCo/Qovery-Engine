@@ -304,39 +304,39 @@ h4 {
     animation: WorkflowFadeIn 0.5s forwards 0.5s;
 }
 
-#Main {
+.main {
     animation-delay: 0.5s;
 }
 
-#BuildArrow {
+.buildArrow {
     animation-delay: 0.9s;
 }
 
-#CI {
+.ci {
     animation-delay: 1.2s;
 }
 
-#ImageArrow {
+.imageArrow {
     animation-delay: 1.5s;
 }
 
-#Registry {
+.registry {
     animation-delay: 1.8s;
 }
 
-#DeployArrow {
+.deployArrow {
     animation-delay: 2.1s;
 }
 
-#CloudProvider {
+.cloudProvider {
     animation-delay: 3s;
 }
 
-#MonitorArrow {
+.monitorArrow {
     animation-delay: 2.7s;
 }
 
-#Monitoring {
+.monitoring {
     animation-delay: 2.4s;
 }
 
